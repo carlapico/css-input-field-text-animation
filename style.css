@@ -15,23 +15,23 @@ body {
     min-height: 100vh;
     flex-direction: column;
     gap: 30px;
-    background: #F0EFEB;
+    background: #A5A58D;
 }
 
 .inputBox {
     position: relative;
     width: 200px;
 }
-
 .inputBox input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #A5A58D;
-    background: #F0EFEB;
+    border: 1px solid #F0EFEB;
+    background: #A5A58D;
     border-radius: 5px;
     outline: none;
-    color: #A5A58D;
+    color: #F0EFEB;
     font-size: 1em;
+    transition: 0.5s
 }
 
 .inputBox span {
@@ -40,13 +40,24 @@ body {
     padding: 10px;
     pointer-events: none;
     font-size: 1em;
-    color: #A5A58D;
+    color: #F0EFEB;
     text-transform: uppercase;
     transition: 0.5s
 }
 
 .inputBox input:valid ~ span, 
 .inputBox input:focus ~ span {
-    color: forestgreen;
-    transform: translate(10px) translate(-7px);
+    color: #1e1e1e;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #A5A58D;
+    border-left: 1px solid #1e1e1e;
+    border-right: 1px solid #1e1e1e;
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid, 
+.inputBox input:focus  {
+    border: 1px solid #1e1e1e;
 }
